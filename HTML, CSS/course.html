@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width-device-width, initial-scale=1.0" charset="utf-8">
+  <title>Education website</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+<body>
+  <section class="sub-header course-header">
+    <nav>
+      <a href="index.html"> <img src="eduford_img\logo.png" alt="logo"> </a>
+      <div class="nav-link" id="navLinks">
+        <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about-us.html">ABOUT</a></li>
+          <li><a href="course.html">PRODUCTS</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+
+    </nav>
+      <h1>Our Products</h1>
+
+  </section>
+  <!-- ========================================course content===================================== -->
+
+  <section class="course">
+    <h1>Categories</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+    <div class="row">
+      <div class="course-coloumn">
+        <h3>Indoor Lights</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="course-coloumn">
+        <h3>Outdoor Lights</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="course-coloumn">
+        <h3>Party Lights</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+  </section>
+  <!-- =================================================facilities========================================== -->
+  <section class="facilities">
+    <h1>Our Products</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    <div class="row">
+      <div class="facilities-column">
+        <img src="eduford_img\library.png" alt="">
+        <h3>World Class Library</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      </div>
+      <div class="facilities-column">
+        <img src="eduford_img\basketball.png" alt="">
+        <h3>World Class Court</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      </div>
+      <div class="facilities-column">
+        <img src="eduford_img\cafeteria.png" alt="">
+        <h3>World Class Cafeteria</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      </div>
+    </div>
+  </section>
+<!-- =========================================Footer===================================================== -->
+<section class="footer">
+  <h4>About Us</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut. </p>
+  <p>© 2022 Om Joshi</p>
+  <p class="instruct">Please hover</p>
+  <p class="author">Made using HTML CSS and Javascript</p>
+</section>
+
+
+
+
+
+
+  <!-- --------------------------------------------Javascript for toggle menu------------------------------------------------- -->
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-240px"; /*as we want to changethe rigth value ofthe nav link therefore we use style.right to changethat property value.*/
+    }
+  </script>
+</body>
+
+</html>

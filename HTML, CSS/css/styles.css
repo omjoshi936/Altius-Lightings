@@ -1,0 +1,755 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(black, rgba(15, 10, 222, 0.3)), url('https://i.pinimg.com/originals/52/b3/02/52b30272f14ed29a1951eefc94052d9b.jpg');
+  background-position: center;
+  background-size: cover;
+  /*cover the entire container with the image even if it has to strech the image.*/
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 1.75% 3%;
+  /*for some space btw the nav container and its elements*/
+  justify-content: space-between;
+  /*gives space between the items in the container*/
+  align-items: center;
+  /*aligns the items in the container to centre.*/
+}
+
+nav img {
+  width: 10rem;
+  height: auto;
+}
+
+.nav-link {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-link ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 1.5%;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.nav-link ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.87rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-link ul li::after {
+  content: "";
+  /*content empty so that we can use the background colour of the content as a line  */
+  height: 2px;
+  /* the height makes the content nackground boc visible and it looks like a line */
+  width: 0;
+  background-color: orange;
+  display: block;
+  /*so that the content of this will come in the next line.*/
+  transition: 0.5s;
+  /*display the content in this with a transition */
+  margin: auto;
+  /*without the margin set to auto the line will start appearing from the left, but with margin set to auto it appears to emerge from the centre.*/
+}
+
+.nav-link ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*this helps to align centre.*/
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-box p {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3rem;
+  margin: 0.8rem 0 2.5rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0.6rem 1.75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: orange;
+  border: 0.125rem solid orange;
+  transition: 0.5s;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media(max-width:700px) {
+  .nav-link ul li {
+    display: block;
+  }
+
+  .nav-link {
+    position: fixed;
+    background-color: orange;
+    height: 100vh;
+    width: 240px;
+    top: 0;
+    right: -240px;
+    text-align: left;
+    transition: 0.5s;
+    z-index: 2;
+    /*z-index decides the order of the stacking of different container, it only works on positioned elements.
+    If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.*/
+  }
+
+  nav .fa {
+    display: block;
+    color: black;
+    margin: 20px 20px 0;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+
+  .nav-link ul {
+    padding: 20px;
+  }
+
+  .nav-link ul li {
+    margin: 20px 0 20px;
+  }
+
+  .nav-link ul li::after {
+    background-color: white;
+  }
+
+  nav .fa-bars {
+    margin: auto 0;
+  }
+}
+
+/* ----------------------------------------------------Courses---------------------------------------------------------- */
+.course {
+  margin: auto;
+  width: 80%;
+  padding-top: 6rem;
+  ;
+  text-align: center;
+}
+
+.course h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.course p {
+  color: grey;
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 300;
+  padding: 0.5rem;
+  font-family: sans-serif;
+}
+
+.row {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-coloumn {
+  flex-basis: 28%;
+  /*flex basis adjust the length of the container or content in the tag with flex property. */
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: rgba(15, 10, 222, 0.15);
+  padding: 1.4rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.course-coloumn h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.course-coloumn:hover {
+  box-shadow: 0 0 10px 0 grey;
+  transition: 0.5s;
+}
+
+@media(max-width:700px) {
+  .row {
+    flex-direction: column;
+    /*instead of flexing as a row it will be flexed as a column*/
+  }
+}
+
+/* -------------------------------------Campus---------------------------------------------------------------------- */
+.campus {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 6rem;
+  position: relative;
+}
+
+.campus h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.campus p {
+  color: grey;
+  padding: 1rem 0;
+  font-family: sans-serif;
+}
+
+.campus-column {
+  flex-basis: 32%;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  /*if the content is more than the specified box the overflow is used to tell what to do with the ovflwing content*/
+}
+
+.campus-column img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+
+.layer:hover {
+  background-color: rgba(15, 10, 222, 0.5);
+}
+
+.layer h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.layer:hover h3 {
+  opacity: 1;
+  bottom: 49%;
+}
+
+/* ---------------------------------------------------facilities------------------------------------------------------- */
+.facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.facilities h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.facilities p {
+  color: grey;
+  padding-top: 0.5rem;
+  font-family: sans-serif;
+}
+
+.facilities-column {
+  padding: 1rem;
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  line-height: 1.4rem;
+}
+
+.facilities-column img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+}
+
+.facilities-column p {
+  color: grey;
+  text-align: justify;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.facilities-column h3 {
+  margin-top: 1rem;
+  padding: 0.7rem 0 0.3rem;
+}
+
+/* ------------------------------------testimonials-------------------------------------------------------------------- */
+.testimonials {
+  width: 80%;
+  padding-top: 5rem;
+  margin: auto;
+  text-align: center;
+}
+
+.testimonials h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.testimonials p {
+  color: grey;
+  padding: 0.5rem;
+  font-family: sans-serif;
+}
+
+.testimonials-column {
+  flex-basis: 45%;
+  text-align: left;
+  border-radius: 10px;
+  background: rgba(15, 10, 222, 0.2);
+  margin-bottom: 5%;
+  cursor: pointer;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.testimonials-column img {
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.testimonials-column h3 {
+  margin-top: 1rem;
+}
+
+@media (max-width:700px) {
+  .testimonials-column img {
+    margin-left: 0.2rem;
+    margin-right: 0.8rem;
+  }
+}
+
+/* ===========================================================Contactus======================================================== */
+.contactus {
+  width: 80%;
+  background-image: linear-gradient(black, rgba(1, 1, 122, 0.5)), url('https://www.ucb.ac.uk/media/rvihjjet/contact-us.jpg?center=0.3448196593181766,0.50955511623986638&mode=crop&heightratio=0.36&width=1920&rnd=132586600006970000');
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  border-radius: 8px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.contactus h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+  padding: 1.5rem 0;
+  font-family: sans-serif;
+}
+
+@media (max-width:700px) {
+  .contactus h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ========================================Footer============================================================ */
+.footer {
+  width: 100%;
+  background: rgba(1, 1, 122, 0.7);
+  font-family: sans-serif;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 5rem;
+  text-align: center;
+  padding: 3rem 0 5rem;
+  position: relative;
+}
+
+.footer p {
+  padding: 0.5rem 0;
+}
+
+.author {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.instruct {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.footer:hover .author {
+  opacity: 1;
+  bottom: 10%;
+}
+
+.footer:hover .instruct {
+  opacity: 0;
+  bottom: 20%;
+}
+
+/* ----------------------------------------------next page-------------------------------------------------- */
+/* -------------------------------------------------about us------------------------------------------------ */
+.sub-header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(black, rgba(15, 10, 222, 0.3)), url("https://th.bing.com/th/id/R.06d119583606e32e9fd90d4f753b8fb7?rik=i%2bFlLofXu6rgYg&riu=http%3a%2f%2falumni.utdallas.edu%2fimage%2f-wallpaper%2fNSERL-1920.jpg&ehk=i7xfZm13RDoUjDWIE%2bDOjTuqy4QNQwDy8b6NRcrXCfs%3d&risl=&pid=ImgRaw&r=0");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+.sub-header h1 {
+  margin-top: 6rem;
+  font-weight: 600;
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ======================================about us content===================================================================*/
+.about-us-page {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0 50px;
+}
+
+.about-col {
+  flex-basis: 48%;
+  padding: 2rem 2px;
+}
+
+.about-col h1 {
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin: 0.8rem 0 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-col p {
+  color: grey;
+  padding: 1rem 0;
+  line-height: 1.4rem;
+  font-family: sans-serif;
+}
+
+.about-col img {
+  margin: 0.8rem 0;
+  height: 30rem;
+  width: 100%;
+}
+
+.red-btn {
+  background: transparent;
+  color: rgba(15, 10, 222, 0.7);
+  border: 1px solid rgba(15, 10, 222, 0.7);
+}
+
+.red-btn:hover {
+  color: white;
+  background: rgba(15, 10, 222, 0.7);
+  border: rgba(15, 10, 222, 0.7);
+}
+.red-btn:active{
+  border:1px solid rgba(15, 10, 222, 0.7);
+  background: transparent;
+  transition: 0;
+  color:rgba(15, 10, 222, 0.7);
+}
+
+@media (max-width:700px) {
+  .about-col {
+    text-align: center;
+  }
+
+  .sub-header h1 {
+    margin-top: 9rem;
+    font-size: 4rem;
+  }
+}
+
+/* ===========================================course-nextpage================================================================ */
+/* ==================================course================================================================= */
+@media(max-width:700px) {
+  .course-header h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* ===========================================blog-nextpage================================================================ */
+/* ==================================blog================================================================= */
+.blog-page {
+  width: 80%;
+  margin: auto;
+  padding: 5rem 0 3rem;
+  text-align: left;
+}
+
+.blog-left {
+  text-align: left;
+  flex-basis: 65%;
+}
+
+.blog-left img {
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.blog-left p {
+  color: grey;
+  line-height: 1.3rem;
+  font-family: sans-serif;
+}
+
+.blog-right {
+  flex-basis: 32%;
+  margin: 2rem 0;
+}
+.blog-right a{
+  text-decoration: none;
+}
+.blog-right div a{
+  color:inherit;
+}
+.blog-right div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  transition: 0.3s;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.blog-right div:hover {
+  position: relative;
+  top: -4px;
+  left: 4px;
+  font-weight: 300;
+  color: rgba(15, 10, 222, 0.7);
+}
+
+.blog-right h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(15, 10, 222, 0.7);
+  color: white;
+  padding: 0.4rem 0;
+  margin-bottom: 1rem;
+}
+
+.comment-box {
+  width: 95%;
+  border: 1px solid #555;
+  border-radius: 4px;
+  margin: 3rem 0;
+  padding: 0.7rem 1.2rem;
+}
+
+.comment-box h3 {
+  margin: 0.5rem;
+  text-align: left;
+}
+
+.comment-form {
+  width: 100%;
+}
+
+.comment-form input, .comment-form textarea {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 10px;
+  border-radius: 4px;
+  background: rgba(15, 10, 222, 0.1);
+  box-sizing: border-box;
+  /*sets the boxes in the box within the border.*/
+  border: none;
+  color: #555;
+  outline: none;
+  transition: 0.5s;
+}
+
+.comment-form input:hover, textarea:hover {
+  background: rgba(15, 10, 222, 0.2);
+}
+
+.comment-box button {
+  margin: 10px 0;
+}
+
+@media(max-width:700px) {
+  .blog-header h1 {
+    margin-top: 7.5rem;
+    font-size: 3.3rem;
+  }
+
+  .blog-left {
+    text-align: justify;
+    width: 100%;
+  }
+
+  .blog-left img {
+    padding: 1.5rem 0;
+    width: 100%;
+  }
+
+  .blog-left h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .blog-left p {
+    color: grey;
+    padding: 0.8rem 0;
+    line-height: 1.3rem;
+    font-family: sans-serif;
+  }
+}
+
+/* ===========================================Contact-nextpage================================================================ */
+/* ==================================contact================================================================= */
+.location {
+  width: 80%;
+  margin: auto;
+  padding: 6rem 0 3rem;
+}
+
+.location iframe {
+  width: 100%;
+}
+
+.contact-col {
+  flex-basis: 48%;
+  margin-bottom: 2.5rem;
+}
+
+.contact-div {
+  width: 80%;
+  margin: auto;
+}
+
+.contact-col div {
+  display: flex;
+  margin-bottom: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-col div .fa {
+  color: rgba(15, 10, 222, 0.3);
+  margin: 0.7rem;
+  margin-right: 1rem;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.contact-col div h5 {
+  font-size: 1.2rem;
+  color: rgba(15, 10, 222, 0.7);
+  font-weight: 300;
+  margin-bottom: 0.3rem
+}
+
+.contact-col div p {
+  padding: 0;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin: 0.8rem 0;
+  padding: 10px;
+  border-radius: 4px;
+  background: transparent;
+  box-sizing: border-box;
+  /*sets the boxes in the box within the border.*/
+  border: 1px solid rgba(15, 10, 222, 0.3);
+  color: #555;
+  outline: none;
+  transition: 0.5s;
+}
+
+.contact-form input:hover, .contact-form textarea:hover {
+  background-color: rgba(15, 10, 222, 0.1);
+}
+
+.contact-form button {
+  margin: 0.5rem 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width:700px) {
+  .contacts h1 {
+    font-size: 4.5rem;
+    margin-top: 5rem;
+  }
+}

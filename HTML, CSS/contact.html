@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width-device-width, initial-scale=1.0" charset="utf-8">
+  <title>Education website</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+<body>
+  <section class="sub-header contacts">
+    <nav>
+      <a href="index.html"> <img src="eduford_img\logo.png" alt="logo"> </a>
+      <div class="nav-link" id="navLinks">
+        <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about-us.html">ABOUT</a></li>
+          <li><a href="course.html">PRODUCTS</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+
+    </nav>
+    <h1>Contact Us</h1>
+
+  </section>
+  <!-- ========================================about us content===================================== -->
+
+  <div class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13996.561258698755!2d77.1088077!3d28.7153524!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xba2993f6e7bfbef3!2sALTIUS%20LIGHTING!5e0!3m2!1sen!2sin!4v1644848951405!5m2!1sen!2sin"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <section class="contact-div">
+    <div class="row">
+      <div class="contact-col">
+        <div>
+          <i class="fa fa-home" aria-hidden="true" onclick="showMenu()"></i>
+          <span>
+            <h5>XYZ Delhi</h5>
+            <p> Lorem ipsum dolor sit amet </p>
+          </span>
+        </div>
+        <div>
+          <i class="fa fa-home" aria-hidden="true" onclick="showMenu()"></i>
+          <span>
+            <h5>XYZ Delhi</h5>
+            <p> Lorem ipsum dolor sit amet </p>
+          </span>
+        </div>
+        <div>
+          <i class="fa fa-home" aria-hidden="true" onclick="showMenu()"></i>
+          <span>
+            <h5>XYZ Delhi</h5>
+            <p> Lorem ipsum dolor sit amet </p>
+          </span>
+        </div>
+      </div>
+      <div class="contact-col">
+        <form class="contact-form" action="form-handler.php" method="post">
+          <input type="text" placeholder="Name" name="Name" value="" required>
+          <input type="email" placeholder="Email" name="Email" value="" required>
+          <input type="text" name="Subject" value="" placeholder="Subject" required>
+          <textarea name="Message" rows="8" placeholder="Message" required></textarea>
+          <button type="button" name="button" class="hero-btn red-btn">Send Message</button>
+        </form>
+    </div>
+  </div>
+
+  </section>
+
+
+  <!-- =========================================Footer===================================================== -->
+  <section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut. </p>
+    <p>© 2022 Om Joshi</p>
+    <p class="instruct">Please hover</p>
+    <p class="author">Made using HTML CSS and Javascript</p>
+  </section>
+
+
+
+
+
+
+  <!-- --------------------------------------------Javascript for toggle menu------------------------------------------------- -->
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-240px"; /*as we want to changethe rigth value ofthe nav link therefore we use style.right to changethat property value.*/
+    }
+  </script>
+</body>
+
+</html>
